@@ -8,20 +8,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard - Voler Admin Dashboard</title>
     
-    <link rel="stylesheet" href="<c:url value="resources/assets/css/bootstrap.css"></c:url>">
+    <link rel="stylesheet" href="<c:url value="/resources/assets/css/bootstrap.css"></c:url>">
     
-    <link rel="stylesheet" href="<c:url value="resources/assets/vendors/chartjs/Chart.min.css"></c:url>">
+    <link rel="stylesheet" href="<c:url value="/resources/assets/vendors/chartjs/Chart.min.css"></c:url>">
 
-    <link rel="stylesheet" href="<c:url value="resources/assets/vendors/perfect-scrollbar/perfect-scrollbar.cs"></c:url>">
-    <link rel="stylesheet" href="<c:url value="resources/assets/css/app.css"></c:url>">
-    <link rel="shortcut icon" href="<c:url value="resources/assets/images/favicon.svg"></c:url>" type="image/x-icon">
+    <link rel="stylesheet" href="<c:url value="/resources/assets/vendors/perfect-scrollbar/perfect-scrollbar.cs"></c:url>">
+    <link rel="stylesheet" href="<c:url value="/resources/assets/css/app.css"></c:url>">
+    <link rel="shortcut icon" href="<c:url value="/resources/assets/images/favicon.svg"></c:url>" type="image/x-icon">
 </head>
 <body>
     <div id="app">
         <div id="sidebar" class='active'>
             <div class="sidebar-wrapper active">
     <div class="sidebar-header">
-        <img src="<c:url value="resources/assets/images/logo.svg"></c:url>" alt="" srcset="">
+        <img src="<c:url value="/resources/assets/images/logo.svg"></c:url>" alt="" srcset="">
     </div>
     <div class="sidebar-menu">
         <ul class="menu">
@@ -42,9 +42,9 @@
 
             
                 <li class="sidebar-item  ">
-                    <a href="table.do" class='sidebar-link'>
+                    <a href="list.do" class='sidebar-link'>
                         <i data-feather="grid" width="20"></i> 
-                        <span>Table</span>
+                        <span>게시판</span>
                     </a>
                     
                 </li>
@@ -160,6 +160,7 @@
         <h3>메인 페이지</h3>
         <p class="text-subtitle text-muted">환영 합니다!</p>
     </div>
+    <a href="/logout">로그아웃</a>
     
 </div>
 
@@ -176,14 +177,14 @@
         </div>
     </div>
     
-    <script src="<c:url value="resources/assets/js/feather-icons/feather.min.js"></c:url>"></script>
-    <script src="<c:url value="resources/assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"/>"></script>
-    <script src="<c:url value="resources/assets/js/app.js"/>"></script>
+    <script src="<c:url value="/resources/assets/js/feather-icons/feather.min.js"></c:url>"></script>
+    <script src="<c:url value="/resources/assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"/>"></script>
+    <script src="<c:url value="/resources/assets/js/app.js"/>"></script>
     
-    <script src="<c:url value="resources/assets/vendors/chartjs/Chart.min.js"/>"></script>
-    <script src="<c:url value="resources/assets/vendors/apexcharts/apexcharts.min.js"/>"></script>
-    <script src="<c:url value="resources/assets/js/pages/dashboard.js"/>"></script>
+    <script src="<c:url value="/resources/assets/vendors/chartjs/Chart.min.js"/>"></script>
+    <script src="<c:url value="/resources/assets/vendors/apexcharts/apexcharts.min.js"/>"></script>
+    <script src="<c:url value="/resources/assets/js/pages/dashboard.js"/>"></script>
 
-    <script src="<c:url value="resources/assets/js/main.js"/>"></script>
+    <script src="<c:url value="/resources/assets/js/main.js"/>"></script>
 </body>
 </html>

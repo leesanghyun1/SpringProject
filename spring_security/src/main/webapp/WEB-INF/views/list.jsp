@@ -29,12 +29,10 @@
             
                 <li class='sidebar-title'>Main Menu</li>
             
-            
-            
                 <li class="sidebar-item active ">
                     <a href="home.do" class='sidebar-link'>
                         <i data-feather="home" width="20"></i> 
-                        <span>Dashboard</span>
+                        <span>홈</span>
                     </a>
                     
                 </li>
@@ -42,9 +40,9 @@
 
             
                 <li class="sidebar-item  ">
-                    <a href="table.do" class='sidebar-link'>
+                    <a href="list.do" class='sidebar-link'>
                         <i data-feather="grid" width="20"></i> 
-                        <span>Table</span>
+                        <span>게시판</span>
                     </a>
                     
                 </li>
@@ -60,12 +58,6 @@
                     
                 </li>
 
-            
-            
-
-            
-            
-            
                 <li class='sidebar-title'>Pages</li>
             
             
@@ -93,10 +85,7 @@
                     </ul>
                     
                 </li>
-
-            
-            
-            
+           
                 <li class="sidebar-item  has-sub">
                     <a href="#" class='sidebar-link'>
                         <i data-feather="alert-circle" width="20"></i> 
@@ -229,49 +218,29 @@
           <table class="table mb-0">
             <thead class="thead-dark">
               <tr>
+                <th>번호</th>
                 <th>작성자</th>
-                <th>-</th>
                 <th>제목</th>
                 <th>날짜</th>
                 <th>조회수</th>
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td class="text-bold-500">Michael Right</td>
-                <td>$15/hr</td>
-                <td class="text-bold-500">UI/UX</td>
-                <td>Remote</td>
-                <td>Austin,Taxes</td>
-              </tr>
-              <tr>
-                <td class="text-bold-500">Morgan Vanblum</td>
-                <td>$13/hr</td>
-                <td class="text-bold-500">Graphic concepts</td>
-                <td>Remote</td>
-                <td>Shangai,China</td>
-              </tr>
-              <tr>
-                <td class="text-bold-500">Tiffani Blogz</td>
-                <td>$15/hr</td>
-                <td class="text-bold-500">Animation</td>
-                <td>Remote</td>
-                <td>Austin,Texas</td>
-              </tr>
-              <tr>
-                <td class="text-bold-500">Ashley Boul</td>
-                <td>$15/hr</td>
-                <td class="text-bold-500">Animation</td>
-                <td>Remote</td>
-                <td>Austin,Texas</td>
-              </tr>
-              <tr>
-                <td class="text-bold-500">Mikkey Mice</td>
-                <td>$15/hr</td>
-                <td class="text-bold-500">Animation</td>
-                <td>Remote</td>
-                <td>Austin,Texas</td>
-              </tr>
+            <c:forEach items="${list}" var="dto">
+	              <tr>
+	                <td class="text-bold-500" width="200">${dto.bId}</td>
+	                <td width="300">${dto.bName}</td>
+	                <td class="text-bold-500" width="1000">
+	                	<c:forEach begin="1" end="${dto.bIndent}">-</c:forEach>
+	               	 	<a href="content_view?bId=${dto.bId}">${dto.bTitle}</a>
+	                </td>
+	                <td width="200">${dto.bDate}</td>
+	                <td width="200">${dto.bHit}</td>
+	              </tr>
+             </c:forEach>
+             <tr>
+			<td colspan="5"> <a href="write_view.do">글작성</a> </td>
+			</tr>
             </tbody>
           </table>
         </div>

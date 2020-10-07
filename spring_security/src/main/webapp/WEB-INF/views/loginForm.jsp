@@ -8,9 +8,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>로그인 - Voler Admin Dashboard</title>
-    <link rel="stylesheet" href="<c:url value="/resources/assets/css/bootstrap.css"/>">
-    <link rel="shortcut icon" href="<c:url value="/resources/assets/images/favicon.svg"/>" type="image/x-icon">
-    <link rel="stylesheet" href="<c:url value="/resources/assets/css/app.css"/>">
+    <link rel="stylesheet" href="<c:url value="resources/assets/css/bootstrap.css"/>">
+    <link rel="shortcut icon" href="<c:url value="resources/assets/images/favicon.svg"/>" type="image/x-icon">
+    <link rel="stylesheet" href="<c:url value="resources/assets/css/app.css"/>">
 </head>
 
 <body onload="document.f.id.focus();">
@@ -22,7 +22,7 @@
             <div class="card pt-4">
                 <div class="card-body">
                     <div class="text-center mb-5">
-                        <img src="<c:url value="/resources/assets/images/favicon.svg"/>" height="48" class='mb-4'>
+                        <img src="<c:url value="resources/assets/images/favicon.svg"/>" height="48" class='mb-4'>
                         <h3>로그인</h3>
                         <p>Please sign in to continue to Voler.</p>
                     </div>
@@ -83,10 +83,10 @@
 </div>
 
     </div>
-    <script src="<c:url value="/resources/assets/js/feather-icons/feather.min.js"/>"></script>
-    <script src="<c:url value="/resources/assets/js/app.js"/>"></script>
+    <script src="<c:url value="resources/assets/js/feather-icons/feather.min.js"/>"></script>
+    <script src="<c:url value="resources/assets/js/app.js"/>"></script>
     
-    <script src="<c:url value="/resources/assets/js/main.js"/>"></script>
+    <script src="<c:url value="resources/assets/js/main.js"/>"></script>
 </body>
 
 </html>

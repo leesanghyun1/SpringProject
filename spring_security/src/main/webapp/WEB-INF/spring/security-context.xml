@@ -7,7 +7,10 @@
     
     <!-- 검사 URL -->
     <http use-expressions="true">
+    	<intercept-url pattern="/resources/**" access="permitAll" />
         <intercept-url pattern="/loginForm.do" access="permitAll" />
+        <intercept-url pattern="/favicon.ico" access="permitAll" />
+        <intercept-url pattern="/logout" access="hasRole('USER')" />
         <intercept-url pattern="/home.do" access="hasRole('USER')" />
         <intercept-url pattern="/list.do" access="hasRole('USER')" />
         <intercept-url pattern="/table-datatable.do" access="hasRole('USER')" />
@@ -19,16 +22,13 @@
                     authentication-failure-url="/loginForm.do?error"
                     username-parameter="id"
                     password-parameter="password" />
-        <logout logout-url="/logout"
-                logout-success-url="/home.do" />
-                
+                   
+      
         <access-denied-handler error-page="/login/accessDenied.do" />
         
       	<session-management invalid-session-url="/loginForm.do" session-fixation-protection="migrateSession" >
         	<concurrency-control max-sessions="1" expired-url="/loginForm.do" />
   		</session-management>
-
-        
     </http>
 <!--     
      provider 
@@ -41,9 +41,11 @@
         </authentication-provider>
     </authentication-manager>  
 -->
-    
-    
 	<!-- provider -->
+	<beans:bean id="userService" class="com.java.service.UserAuthenticationService">
+		<beans:constructor-arg name="sqlSession" ref="sqlSession" />
+	</beans:bean>
+
 	<!-- 데이터베이스 -->
 	<authentication-manager>
 	    <authentication-provider>

@@ -1,3 +1,6 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,21 +8,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Editor - Voler Admin Dashboard</title>
     
-    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="<c:url value="resources/assets/css/bootstrap.css"></c:url>">
     
-    <link rel="stylesheet" href="assets/vendors/quill/quill.bubble.css">
-    <link rel="stylesheet" href="assets/vendors/quill/quill.snow.css">
+    <link rel="stylesheet" href="<c:url value="assets/vendors/quill/quill.bubble.css"/>">
+    <link rel="stylesheet" href="<c:url value="assets/vendors/quill/quill.snow.css"/>">
 
-    <link rel="stylesheet" href="assets/vendors/perfect-scrollbar/perfect-scrollbar.css">
-    <link rel="stylesheet" href="assets/css/app.css">
-    <link rel="shortcut icon" href="assets/images/favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="<c:url value="resources/assets/vendors/perfect-scrollbar/perfect-scrollbar.cs"></c:url>">
+    <link rel="stylesheet" href="<c:url value="resources/assets/css/app.css"></c:url>">
+    <link rel="shortcut icon" href="<c:url value="resources/assets/images/favicon.svg"></c:url>" type="image/x-icon">
 </head>
 <body>
     <div id="app">
         <div id="sidebar" class='active'>
             <div class="sidebar-wrapper active">
     <div class="sidebar-header">
-        <img src="assets/images/logo.svg" alt="" srcset="">
+       <img src="<c:url value="resources/assets/images/logo.svg"></c:url>" alt="" srcset="">
     </div>
     <div class="sidebar-menu">
         <ul class="menu">
@@ -387,7 +390,8 @@
                         <li class="dropdown">
                             <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
                                 <div class="avatar mr-1">
-                                    <img src="assets/images/avatar/avatar-s-1.png" alt="" srcset="">
+                                
+                                    <img src="<c:url value="assets/images/avatar/avatar-s-1.png"/>" alt="" srcset="">
                                 </div>
                                 <div class="d-none d-md-block d-lg-inline-block">Hi, Saugi</div>
                             </a>
@@ -481,13 +485,13 @@
             </footer>
         </div>
     </div>
-    <script src="assets/js/feather-icons/feather.min.js"></script>
-    <script src="assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
-    <script src="assets/js/app.js"></script>
-    
-    <script src="assets/vendors/quill/quill.min.js"></script>
-    <script src="assets/js/pages/form-editor.js"></script>
+    <script src="<c:url value="resources/assets/js/feather-icons/feather.min.js"></c:url>"></script>
+    <script src="<c:url value="resources/assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"/>"></script>
+    <script src="<c:url value="resources/assets/js/app.js"/>"></script>
+ 
+    <script src="<c:url value="assets/vendors/quill/quill.min.js"/>"></script>
+    <script src="<c:url value="assets/js/pages/form-editor.js"/>"></script>
 
-    <script src="assets/js/main.js"></script>
+    <script src="<c:url value="resources/assets/js/main.js"/>"></script>
 </body>
 </html>
