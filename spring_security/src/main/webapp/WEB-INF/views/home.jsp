@@ -1,6 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ page import="org.springframework.security.core.context.SecurityContextHolder" %>
+<%@ page import="org.springframework.security.core.Authentication" %>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -158,9 +163,13 @@
 <div class="main-content container-fluid">
     <div class="page-title">
         <h3>메인 페이지</h3>
-        <p class="text-subtitle text-muted">환영 합니다!</p>
+        <sec:authorize access="isAuthenticated()">
+        <p class="text-subtitle text-muted"><sec:authentication property="principal.username"/>님, 환영 합니다!</p>
+        </sec:authorize>
     </div>
-    <a href="/logout">로그아웃</a>
+   <form action="/logout" method="post">
+   <input type="submit" value="로그아웃">
+   </form>
     
 </div>
 

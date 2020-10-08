@@ -51,6 +51,12 @@
                                 </div>
                             </div>
                         </div>
+                         <c:if test="${not empty SPRING_SECURITY_LAST_EXCEPTION}">
+							    <font color="red">
+							        <p>아이디나 비밀번호가 맞지 않습니다. 다시 확인해주세요. <br/></p>
+							        <c:remove var="SPRING_SECURITY_LAST_EXCEPTION" scope="session"/>
+							    </font>
+							</c:if>
                         <div class='form-check clearfix my-4'>
                             <div class="checkbox float-left">
                                 <input type="checkbox" id="checkbox1" class='form-check-input' >
