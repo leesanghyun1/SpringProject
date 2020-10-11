@@ -1,4 +1,4 @@
-package com.java.Board.controller;
+	package com.java.Board.controller;
 
 
 import javax.servlet.http.HttpServletRequest;

@@ -8,7 +8,7 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 
-//사용자 정보를 담는 인터페이스 UserDetails
+//�궗�슜�옄 �젙蹂대�� �떞�뒗 �씤�꽣�럹�씠�뒪 UserDetails
 @SuppressWarnings("serial") 
 public class CustomUserDetails implements UserDetails{
 	private String ID;

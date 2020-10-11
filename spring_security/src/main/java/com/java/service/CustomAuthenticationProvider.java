@@ -1,23 +1,23 @@
 package com.java.service;
 
-reimport javax.inject.Inject;
-import javax.security.sasl.AuthenticationException;
+import javax.inject.Inject;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
+import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.userdetails.UserDetailsService;
 
 public class CustomAuthenticationProvider implements AuthenticationProvider {
 	
-	@Inject
+	@Autowired
 	private UserDetailsService service;
 	
 	@Override
-	public Authentication authenticate(Authentication authentication) throws AuthenticationException{
-		
-		
+	public Authentication authenticate(Authentication authentication) 
+			throws AuthenticationException{
 		String id = (String)authentication.getPrincipal();
 		String pw = (String)authentication.getCredentials();
 		
@@ -27,7 +27,8 @@ public class CustomAuthenticationProvider implements AuthenticationProvider {
 			throw new BadCredentialsException(id);
 		}
 			
-			return UsernamePasswordAuthenticationToken(id, pw, user.getAuthorities());
+		return new UsernamePasswordAuthenticationToken(id, pw, user.getAuthorities());
+		
 	}
 	
 	@Override
